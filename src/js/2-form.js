@@ -24,7 +24,6 @@ function populateForm() {
     };
 };
 
-
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -32,6 +31,8 @@ form.addEventListener("submit", (event) => {
     if (email.value.trim() === "" || message.value.trim() === "") {
         return alert('Fill please all fields')
     };
+
+console.log({email: email.value, message: message.value });
 
     formData = { email: "", message: "" };
     localStorage.removeItem(STORAGE_KEY);
